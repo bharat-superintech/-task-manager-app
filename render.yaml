@@ -1,13 +1,13 @@
 services:
   - type: web
-    name: task-manager-app
-    env: node
+    name: superintech-task-app
+    runtime: node
     buildCommand: npm install
     startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
       - key: JWT_SECRET
-        generateValue: true
+        value: superintech-secret-2024
       - key: MONGODB_URI
-        sync: false
+        value: mongodb+srv://bharat_db_user:GgR1N8L8UiyEItWP@cluster0.devpca7.mongodb.net/taskmanager?retryWrites=true&w=majority
